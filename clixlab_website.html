@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CLIXLAB // Create. Customize. Stand Out.</title>
+<style>
+:root{--bg:#03060b;--p:#080f17;--p2:#0b1620;--line:#1c3144;--txt:#f4f8ff;--muted:#8fa0b2;--blue:#10a8ff;--glow:0 0 38px rgba(16,168,255,.2)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 15% 8%,#06345a22,transparent 28%),radial-gradient(circle at 85% 20%,#008cff18,transparent 30%),var(--bg);color:var(--txt);line-height:1.5}a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}
+.container{width:min(1160px,calc(100% - 32px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:#03060bdd;backdrop-filter:blur(16px);border-bottom:1px solid #183047}.navin{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:1000;letter-spacing:2px;font-size:22px}.logo span{color:var(--blue)}.links{display:flex;align-items:center;gap:19px;color:#a8b7c7;font-size:14px}.links a:hover{color:#fff}.bag{border:1px solid #2a485f;background:#07111a;color:#fff;border-radius:9px;padding:8px 11px;cursor:pointer}.count{background:var(--blue);color:#00131e;border-radius:99px;padding:2px 6px;margin-left:4px;font-size:11px;font-weight:900}
+.hero{padding:90px 0 55px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}.badge{display:inline-block;border:1px solid #15577f;background:#061522;color:#5ecbff;border-radius:99px;padding:7px 11px;font-size:11px;letter-spacing:2px;font-weight:900}.hero h1{font-size:clamp(62px,10vw,122px);line-height:.82;letter-spacing:-6px;margin:22px 0}.hero h1 span{color:var(--blue);text-shadow:0 0 35px #10a8ff55}.lead{font-size:18px;color:#aebccc;max-width:650px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px}.btn{border:0;border-radius:11px;padding:13px 17px;font-weight:900;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:.18s}.primary{background:var(--blue);color:#00131e;box-shadow:0 0 28px #10a8ff30}.secondary{background:#07111a;border:1px solid #2b4459}.btn:hover,.product:hover,.drop:hover{transform:translateY(-3px)}
+.mock{height:455px;border:1px solid #23435b;border-radius:24px;background:radial-gradient(circle at 50% 28%,#078ddd55,transparent 32%),linear-gradient(145deg,#0b1824,#04080d 65%);box-shadow:var(--glow);padding:18px;position:relative;overflow:hidden}.scan{height:4px;position:absolute;left:-100%;right:100%;top:0;background:linear-gradient(90deg,transparent,var(--blue),transparent);animation:scan 4s infinite}@keyframes scan{to{left:100%;right:-100%}}.mocktop{display:flex;justify-content:space-between;color:#73869a;font-size:11px;letter-spacing:1px}.orbit{width:220px;height:220px;border:1px solid #61d1ff8c;border-radius:50%;margin:70px auto 45px;display:grid;place-items:center;box-shadow:0 0 75px #10a8ff18;position:relative}.orbit:before{content:"";position:absolute;inset:28px;border:1px solid #61d1ff2b;border-radius:50%}.orbit b{font-size:34px;letter-spacing:1px;z-index:1}.orbit b span{color:var(--blue)}.mockStats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.mini{border:1px solid #1a3448;background:#061019cc;border-radius:11px;padding:11px}.mini b{font-size:15px}.mini small{display:block;color:#73869a;font-size:11px}
+.ticker{border-block:1px solid #183047;background:#040a10;overflow:hidden}.ticker div{white-space:nowrap;padding:11px;letter-spacing:2px;color:#748ca1;font-size:11px}.ticker span{color:var(--blue)}
+section{padding:80px 0}.head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.k{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:900}.head h2{font-size:39px;line-height:1;margin:8px 0}.sub{color:var(--muted);max-width:700px;margin:0}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.product{border:1px solid var(--line);background:linear-gradient(145deg,#0a141e,#05090e);padding:15px;border-radius:18px;cursor:pointer;transition:.18s}.art{height:180px;border-radius:13px;border:1px solid #234058;display:grid;place-items:center;margin-bottom:14px;overflow:hidden;position:relative}.art:after{content:"";position:absolute;inset:-30%;background:radial-gradient(circle,#0aa9ff,transparent 42%);opacity:.16}.a1{background:linear-gradient(145deg,#0d1116,#2b3138)}.a2{background:radial-gradient(circle at 50% 35%,#0c8fd4,#07111a 45%,#04070a)}.a3{background:radial-gradient(circle at 68% 35%,#38556d,#0b0e14 50%,#04070a)}.a4{background:radial-gradient(circle at 50% 50%,#1f2f3e,#070b10 52%,#030507)}.art b{z-index:1;font-size:23px;letter-spacing:2px}.pname{font-weight:900}.pmeta{display:flex;justify-content:space-between;align-items:center;margin-top:9px}.price{font-weight:900}.tag{font-size:10px;color:#69cfff;border:1px solid #20506e;padding:5px 7px;border-radius:99px}.add{width:100%;margin-top:12px;background:#07131e;border:1px solid #29465e;border-radius:10px;padding:10px;cursor:pointer;font-weight:800}.add:hover{border-color:#278aca}
+.dropGrid{display:grid;grid-template-columns:1.4fr .8fr .8fr;grid-template-rows:210px 210px;gap:14px}.drop{border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;align-items:end;cursor:pointer;position:relative;overflow:hidden;background:#08121b;transition:.18s}.drop.big{grid-row:span 2;background:radial-gradient(circle at 72% 24%,#0b93dd55,transparent 32%),linear-gradient(145deg,#131619,#05080c)}.drop.v{background:radial-gradient(circle at 72% 24%,#52c7ff2c,transparent 30%),#07111b}.drop.p{background:radial-gradient(circle at 72% 24%,#8294a92c,transparent 30%),#070b12}.drop.n{background:radial-gradient(circle at 60% 30%,#21a6ec2d,transparent 30%),#080c13}.drop small{color:#64c9ff;letter-spacing:2px}.drop h3{font-size:28px;margin:3px 0}.drop p{margin:0;color:#8999aa;font-size:12px}
+.lab{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:linear-gradient(145deg,#09141e,#05090d);border:1px solid var(--line);border-radius:20px;padding:22px}.form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form label{font-size:12px;color:#8798aa;display:grid;gap:5px}.form input,.form select,.form textarea{background:#050a10;border:1px solid #253b50;color:#fff;border-radius:10px;padding:11px;outline:0}.form textarea{min-height:110px;resize:vertical}.full{grid-column:1/-1}.preview{min-height:390px;border:1px solid #21445d;border-radius:16px;background:radial-gradient(circle at 50% 38%,#10a8ff34,transparent 30%),#050b11;display:grid;place-items:center;position:relative}.circle{width:230px;height:230px;border-radius:50%;border:1px solid #63d2ff99;display:grid;place-items:center;box-shadow:0 0 75px #10a8ff20;position:relative}.circle:before{content:"";position:absolute;inset:22px;border:1px solid #63d2ff30;border-radius:50%}.pvtext{font-size:29px;font-weight:1000;letter-spacing:2px;z-index:1}.pvtext span{color:var(--blue)}.pvmeta{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;color:#77899c;font-size:10px}
+.features,.steps,.faq{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature,.step{border:1px solid var(--line);background:#070d14;border-radius:16px;padding:20px}.icon{font-size:22px;color:#62ccff;margin-bottom:11px}.feature p,.step p{font-size:12px;color:#8494a5;margin:5px 0 0}.step .num{font-size:10px;color:#5ecaff;letter-spacing:2px;font-weight:900}.step h3{margin-top:8px}.faq{grid-template-columns:1fr 1fr}.faq details{border:1px solid var(--line);background:#070d14;border-radius:13px;padding:15px}.faq summary{font-weight:800;cursor:pointer}.faq p{font-size:13px;color:#8494a5;margin-top:8px}
+.banner{border:1px solid #1e4762;border-radius:22px;padding:28px;background:radial-gradient(circle at 80% 25%,#10a8ff2e,transparent 30%),#07111a;display:flex;justify-content:space-between;gap:20px;align-items:center}.banner p{color:#8fa1b2;font-size:13px;margin-top:5px}.email{display:flex;gap:8px}.email input{min-width:260px;background:#050a10;border:1px solid #29465e;border-radius:10px;padding:12px;color:#fff}
+footer{padding:38px 0;border-top:1px solid #183047;color:#708196}.foot{display:flex;justify-content:space-between;gap:20px}.footlinks{display:flex;gap:16px;font-size:12px}.footlinks a:hover{color:#fff}.note{font-size:11px;color:#6e7e91;margin-top:12px}
+.modal{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:100;padding:18px}.modal.open{display:flex}.modalbox{width:min(700px,100%);background:#071019;border:1px solid #2d526c;border-radius:22px;box-shadow:0 20px 90px #000;padding:18px}.modalTop{display:flex;justify-content:space-between;align-items:center}.x{background:#0b1822;border:1px solid #274156;color:#fff;border-radius:9px;padding:7px 10px;cursor:pointer}.modalArt{height:300px;border-radius:15px;margin-top:14px;border:1px solid #274b63;display:grid;place-items:center;font-size:45px;background:radial-gradient(circle,#0b91d455,transparent 40%),#07111b}.modalBoxText h3{font-size:30px;margin:15px 0 4px}.modalBoxText p{color:#91a1b2}.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,20px);opacity:0;background:#0c2535;border:1px solid #2a698f;padding:10px 14px;border-radius:10px;font-size:12px;z-index:120;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:930px){.heroGrid,.lab{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.features,.steps{grid-template-columns:1fr 1fr}.dropGrid{grid-template-columns:1fr 1fr;grid-template-rows:260px 200px}.drop.big{grid-column:1/-1;grid-row:auto}}
+@media(max-width:650px){.links{display:none}.hero{padding-top:60px}.hero h1{letter-spacing:-4px}.mockStats{grid-template-columns:1fr}.orbit{margin:45px auto 30px}.grid,.features,.steps,.faq{grid-template-columns:1fr}.dropGrid{grid-template-columns:1fr;grid-template-rows:auto}.drop.big{grid-column:auto}.drop{min-height:185px}.form{grid-template-columns:1fr}.full{grid-column:auto}.banner{flex-direction:column;align-items:flex-start}.email{width:100%;flex-direction:column}.email input{min-width:0;width:100%}.foot{flex-direction:column}}
+
+.qty{display:flex;align-items:center;gap:6px}.qty button{width:28px;height:28px;border:1px solid #29465e;background:#07131e;color:#fff;border-radius:7px;cursor:pointer}.qty span{min-width:20px;text-align:center;font-size:12px}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="container navin">
+<a class="logo" href="#top">◈ CLIX<span>LAB</span></a>
+<div class="links"><a href="#shop">Shop</a><a href="#drop">Drops</a><a href="#lab">Custom Lab</a><a href="#gallery">Gallery</a><a href="#about">About</a><button class="bag" id="bagBtn">Bag <span class="count" id="count">0</span></button></div>
+</div></nav>
+
+<div class="modal" id="modal"><div class="modalbox">
+<div class="modalTop"><b id="modalLabel">CLIXLAB / VIEW</b><button class="x" id="closeModal">✕</button></div>
+<div class="modalArt" id="modalArt">CLIXLAB</div><div class="modalBoxText"><h3 id="modalTitle">Design</h3><p id="modalDesc">Details</p></div>
+<div class="actions"><button class="btn primary" id="modalAdd">Add to Bag</button><button class="btn secondary" id="modalClose2">Back</button></div>
+</div></div>
+
+<div class="modal" id="bagModal"><div class="modalbox">
+<div class="modalTop"><b>YOUR BAG</b><button class="x" id="bagClose">✕</button></div>
+<div id="bagList" style="margin-top:15px"></div>
+<div id="bagSummary" style="display:none">
+<div style="display:grid;gap:7px;margin-top:14px;color:#9aaabc;font-size:13px">
+<div style="display:flex;justify-content:space-between"><span>Subtotal</span><span id="subtotal">$0</span></div>
+<div style="display:flex;justify-content:space-between"><span>Digital delivery</span><span>FREE</span></div>
+<div style="display:flex;justify-content:space-between;font-weight:900;color:#fff;border-top:1px solid #1b2d3e;padding-top:10px"><span>Total</span><span id="total">$0</span></div>
+</div>
+<button class="btn primary" style="width:100%;margin-top:14px" id="checkoutBtn">Continue to Checkout →</button>
+</div>
+<p class="note">This is a demo storefront. Real payments must be connected by a parent/guardian using an adult-owned payment account.</p>
+</div></div>
+
+<div class="modal" id="checkoutModal"><div class="modalbox">
+<div class="modalTop"><b>CHECKOUT / CLIXLAB</b><button class="x" id="checkoutClose">✕</button></div>
+<div id="checkoutView">
+<div style="margin-top:14px;padding:13px;border:1px solid #1c3345;border-radius:12px;background:#061019">
+<div style="font-size:12px;color:#72879b">ORDER</div>
+<div id="checkoutItems" style="margin-top:7px;font-size:13px"></div>
+<div style="display:flex;justify-content:space-between;margin-top:12px;padding-top:10px;border-top:1px solid #1b2d3e;font-weight:900"><span>Total</span><span id="checkoutTotal">$0</span></div>
+</div>
+<div style="margin-top:16px;display:grid;gap:10px">
+<label style="font-size:12px;color:#8798aa">Customer name<input id="coName" placeholder="Your name" style="width:100%;margin-top:5px;background:#050a10;border:1px solid #253b50;color:#fff;border-radius:10px;padding:11px"></label>
+<label style="font-size:12px;color:#8798aa">Email for digital delivery<input id="coEmail" type="email" placeholder="you@example.com" style="width:100%;margin-top:5px;background:#050a10;border:1px solid #253b50;color:#fff;border-radius:10px;padding:11px"></label>
+<label style="font-size:12px;color:#8798aa">Promo code <input id="promo" placeholder="Try CLIX10" style="width:100%;margin-top:5px;background:#050a10;border:1px solid #253b50;color:#fff;border-radius:10px;padding:11px"></label>
+</div>
+<button class="btn primary" style="width:100%;margin-top:15px" id="placeOrder">Place Demo Order</button>
+<p class="note">No real card information is requested on this demo checkout.</p>
+</div>
+<div id="successView" style="display:none;text-align:center;padding:35px 10px">
+<div style="font-size:42px;color:#10a8ff">✓</div>
+<h2 style="margin:8px 0">ORDER CREATED</h2>
+<p style="color:#92a3b4">Your demo order number is <b id="orderNo">CLX-001</b>.</p>
+<p style="color:#92a3b4;font-size:13px">In a real store, the customer would receive their digital files after payment is completed.</p>
+<button class="btn secondary" id="doneBtn" style="margin-top:12px">Back to Shop</button>
+</div>
+</div></div>
+
+<main id="top">
+<header class="hero"><div class="container heroGrid">
+<div><div class="badge">● DIGITAL GAMING DESIGN LAB</div><h1>CLIX<span>LAB</span></h1><p class="lead">Custom gaming graphics, futuristic digital drops, and designs built around your username, your game, and your style.</p>
+<div class="actions"><a class="btn primary" href="#lab">⚡ Build a Custom</a><a class="btn secondary" href="#drop">Explore Drop 001</a></div><p class="note">Create. Customize. Stand Out.</p></div>
+<div class="mock"><div class="scan"></div><div class="mocktop"><span>CLIXLAB / SYSTEM 001</span><span>ONLINE</span></div><div class="orbit"><b>CLIX<span>LAB</span></b></div><div class="mockStats"><div class="mini"><b>05</b><small>Starter designs</small></div><div class="mini"><b>$3+</b><small>Digital builds</small></div><div class="mini"><b>001</b><small>Live drop</small></div></div></div>
+</div></header>
+
+<div class="ticker"><div><span>CLIXLAB</span> • CUSTOM GRAPHICS • <span>AFTERDARK</span> • GAMING • DIGITAL DROPS • CREATOR DESIGNS • <span>BUILD DIFFERENT</span> •</div></div>
+
+<section><div class="container"><div class="grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="product" onclick="openInfo('CLIXLAB PFP','Custom profile picture built around your username and colors.','$3–$5','✦ PFP')"><div class="art a1"><b>✦ PFP</b></div><div class="pname">CLIXLAB PFP</div><div class="pmeta"><span class="price">$3–$5</span><span class="tag">CUSTOM</span></div></div>
+<div class="product" onclick="openInfo('CLIXLAB BANNER','Matching banner for your profile or channel.','$3–$5','⚡ BANNER')"><div class="art a2"><b>⚡ BANNER</b></div><div class="pname">CLIXLAB BANNER</div><div class="pmeta"><span class="price">$3–$5</span><span class="tag">CUSTOM</span></div></div>
+<div class="product" onclick="openInfo('CLIXLAB DUO','PFP plus a matching banner as one set.','$6–$8','DUO')"><div class="art a3"><b>DUO</b></div><div class="pname">CLIXLAB DUO</div><div class="pmeta"><span class="price">$6–$8</span><span class="tag">SET</span></div></div>
+<div class="product" onclick="openInfo('CLIXLAB WALLPAPER','A custom phone or desktop wallpaper.','$2–$4','WALL')"><div class="art a4"><b>WALL</b></div><div class="pname">CLIXLAB WALLPAPER</div><div class="pmeta"><span class="price">$2–$4</span><span class="tag">DIGITAL</span></div></div>
+</div></div></section>
+
+<section id="drop"><div class="container"><div class="head"><div><div class="k">Drop 001 / Afterdark</div><h2>See the collection.</h2><p class="sub">Click any card to open a larger view.</p></div></div>
+<div class="dropGrid">
+<div class="drop big" onclick="openInfo('VOID','Black + white. Sharp, minimal, mysterious.','$5','VOID')"><div><small>01 — VOID</small><h3>VOID</h3><p>Black + White</p></div></div>
+<div class="drop v" onclick="openInfo('VOLT','Electric-blue glow over a dark gaming base.','$5','VOLT')"><div><small>02 — VOLT</small><h3>VOLT</h3><p>Black + Electric Blue</p></div></div>
+<div class="drop p" onclick="openInfo('PHANTOM','Dark gray, cold blue, and a ghost-mode feel.','$5','PHANTOM')"><div><small>03 — PHANTOM</small><h3>PHANTOM</h3><p>Dark Gray + Blue</p></div></div>
+<div class="drop n" onclick="openInfo('NIGHTSHIFT','Late-night concept made for the lab wall.','$4','NIGHTSHIFT')"><div><small>LAB EXTRA</small><h3>NIGHTSHIFT</h3><p>Limited concept</p></div></div>
+</div></div></section>
+
+<section id="lab"><div class="container"><div class="head"><div><div class="k">Custom Lab</div><h2>Build your design.</h2><p class="sub">Type into the controls and the preview changes instantly.</p></div></div>
+<div class="lab"><div class="panel"><div class="form">
+<label>Username<input id="uname" value="CLIXZ"></label>
+<label>Game<select id="game"><option>Fortnite</option><option>Rocket League</option><option>Roblox</option><option>Minecraft</option><option>Other</option></select></label>
+<label>Style<select id="style"><option>AFTERDARK</option><option>NEON</option><option>MINIMAL</option><option>CHAOS</option></select></label>
+<label>Accent<select id="accent"><option value="#10a8ff">Electric Blue</option><option value="#ffffff">White</option><option value="#bb55ff">Purple</option><option value="#ff4055">Red</option></select></label>
+<label class="full">Details<textarea id="details" placeholder="Lightning, crown, initials, symbols..."></textarea></label>
+<button class="btn primary full" id="save">Save My Build</button>
+</div></div>
+<div class="panel"><div class="preview"><div class="circle" id="pvCircle"><div class="pvtext" id="pvText">CLIX<span>Z</span></div></div><div class="pvmeta"><span id="pvGame">FORTNITE</span><span id="pvStyle">AFTERDARK // CUSTOM</span></div></div></div>
+</div></div></section>
+
+<section id="gallery"><div class="container"><div class="head"><div><div class="k">Gallery</div><h2>See more concepts.</h2><p class="sub">Click a card to inspect it.</p></div></div>
+<div class="grid">
+<div class="product" onclick="openInfo('OVERCLOCK','Blue Surge — high-energy PFP concept.','$4','OVERCLOCK')"><div class="art a2"><b>OVERCLOCK</b></div><div class="pname">Blue Surge</div><div class="pmeta"><span>01</span><span class="tag">PFP</span></div></div>
+<div class="product" onclick="openInfo('NOIR','Noir Signal — clean dark banner concept.','$4','NOIR')"><div class="art a1"><b>NOIR</b></div><div class="pname">Noir Signal</div><div class="pmeta"><span>02</span><span class="tag">BANNER</span></div></div>
+<div class="product" onclick="openInfo('GHOST','Ghost Mode — cold blue avatar concept.','$4','GHOST')"><div class="art a3"><b>GHOST</b></div><div class="pname">Ghost Mode</div><div class="pmeta"><span>03</span><span class="tag">AVATAR</span></div></div>
+<div class="product" onclick="openInfo('GRID','Grid Runner — digital wallpaper concept.','$3','GRID')"><div class="art a4"><b>GRID</b></div><div class="pname">Grid Runner</div><div class="pmeta"><span>04</span><span class="tag">WALL</span></div></div>
+</div></div></section>
+
+<section><div class="container"><div class="head"><div><div class="k">Why CLIXLAB</div><h2>More than a picture.</h2></div></div>
+<div class="features"><div class="feature"><div class="icon">∞</div><h3>Custom by default</h3><p>Your username, colors and ideas drive the design.</p></div><div class="feature"><div class="icon">⚡</div><h3>Fast concepts</h3><p>Start with a simple brief and keep improving it.</p></div><div class="feature"><div class="icon">◈</div><h3>Digital first</h3><p>Start with low-cost digital products and build a portfolio.</p></div></div></div></section>
+
+<section><div class="container"><div class="head"><div><div class="k">How it works</div><h2>Idea → design.</h2></div></div>
+<div class="steps"><div class="step"><div class="num">01 / BRIEF</div><h3>Tell us</h3><p>Username, game, colors, vibe.</p></div><div class="step"><div class="num">02 / BUILD</div><h3>Create</h3><p>Turn the idea into a concept.</p></div><div class="step"><div class="num">03 / TUNE</div><h3>Adjust</h3><p>Use feedback to make changes.</p></div><div class="step"><div class="num">04 / DELIVER</div><h3>Finish</h3><p>Prepare the final digital design.</p></div></div></div></section>
+
+<section id="about"><div class="container"><div class="head"><div><div class="k">About</div><h2>Build different.</h2><p class="sub">CLIXLAB is a starter gaming-design brand concept built around custom digital graphics and a futuristic identity.</p></div></div>
+<div class="banner"><div><h3>Join the CLIXLAB signal.</h3><p>Get notified when a new drop is ready.</p></div><form class="email" id="news"><input type="email" placeholder="your@email.com" required><button class="btn primary">Join</button></form></div>
+<p class="note">This demo site does not process real payments or send emails. For a real business, have a parent/guardian help with payment accounts, customer data, and business setup.</p>
+</div></section>
+
+<section><div class="container"><div class="head"><div><div class="k">FAQ</div><h2>Questions?</h2></div></div>
+<div class="faq"><details><summary>Can I click the products?</summary><p>Yep. Product and drop cards open a larger detail window.</p></details><details><summary>Does the bag work?</summary><p>Yes. Add products, open the bag, and the demo calculates a total.</p></details><details><summary>Does the Custom Lab work?</summary><p>Yes. Your username, style, game, and accent update the preview as you type.</p></details><details><summary>Is checkout real?</summary><p>No. It is intentionally a demo until a parent/guardian helps set up a real store and payment system.</p></details></div></div></section>
+</main>
+
+<footer><div class="container foot"><div><b>◈ CLIX<span style="color:var(--blue)">LAB</span></b><div class="note">Create. Customize. Stand Out.</div></div><div class="footlinks"><a href="#shop">Shop</a><a href="#drop">Drops</a><a href="#lab">Custom</a><a href="#about">About</a></div></div></footer>
+<div class="toast" id="toast"></div>
+
+<script>
+const $=id=>document.getElementById(id);
+let cart=[];
+let current={name:"Design",price:4,art:"CLIXLAB",desc:"Custom digital design."};
+
+function money(n){return "$"+n.toFixed(2)}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),1800)}
+function openInfo(name,desc,price,art){
+  current={name,price:parseFloat(price.replace("$",""))||4,art,desc};
+  $("modalTitle").textContent=name;$("modalDesc").textContent=desc+" Starting from "+price+".";
+  $("modalArt").textContent=art;$("modal").classList.add("open");
+}
+function closeInfo(){$("modal").classList.remove("open")}
+function addItem(name,price){const found=cart.find(x=>x.name===name);if(found)found.qty++;else cart.push({name,price,qty:1});updateCount();toast(name+" added to your bag");}
+function updateCount(){$("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function subtotalValue(){return cart.reduce((s,x)=>s+x.price*x.qty,0)}
+function renderBag(){
+  const box=$("bagList");
+  const summary=$("bagSummary");
+  if(!cart.length){box.innerHTML='<div style="color:#77889a;padding:18px 0">Your bag is empty. Add something from the shop.</div>';summary.style.display="none";return}
+  let total=subtotalValue();
+  box.innerHTML=cart.map((x,i)=>`<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px;border:1px solid #1b3143;border-radius:10px;margin-bottom:8px;font-size:13px"><div><b>${x.name}</b><div style="color:#72879b;font-size:11px">${money(x.price)} each · Digital</div></div><div class="qty"><button onclick="changeQty(${i},-1)">−</button><span>${x.qty}</span><button onclick="changeQty(${i},1)">+</button><button onclick="removeItem(${i})" style="background:none;border:0;color:#64c9ff;cursor:pointer;margin-left:2px">✕</button></div></div>`).join("");
+  $("subtotal").textContent=money(total);$("total").textContent=money(total);summary.style.display="block";
+}
+function changeQty(i,delta){cart[i].qty+=delta;if(cart[i].qty<=0)cart.splice(i,1);updateCount();renderBag()}
+function removeItem(i){cart.splice(i,1);updateCount();renderBag()}
+function renderCheckout(){
+  const items=cart.map(x=>`<div style="display:flex;justify-content:space-between;padding:4px 0"><span>${x.name} × ${x.qty}</span><span>${money(x.price*x.qty)}</span></div>`).join("");
+  $("checkoutItems").innerHTML=items||'<span style="color:#77889a">Your bag is empty.</span>';
+  $("checkoutTotal").textContent=money(subtotalValue());
+}
+function openCheckout(){
+  if(!cart.length){toast("Your bag is empty");return}
+  $("bagModal").classList.remove("open");renderCheckout();$("checkoutView").style.display="block";$("successView").style.display="none";$("checkoutModal").classList.add("open");
+}
+function makeOrderNumber(){return "CLX-"+Math.floor(100+Math.random()*900)}
+
+$("modalAdd").onclick=()=>{addItem(current.name,current.price);closeInfo()}
+$("closeModal").onclick=closeInfo;$("modalClose2").onclick=closeInfo;
+$("bagBtn").onclick=()=>{$("bagModal").classList.add("open");renderBag()}
+$("bagClose").onclick=()=>$("bagModal").classList.remove("open");
+$("checkoutBtn").onclick=openCheckout;
+$("checkoutClose").onclick=()=>$("checkoutModal").classList.remove("open");
+$("doneBtn").onclick=()=>$("checkoutModal").classList.remove("open");
+$("promo").addEventListener("input",e=>{if(e.target.value.trim().toUpperCase()==="CLIX10")toast("CLIX10 applied on demo orders")});
+$("placeOrder").onclick=()=>{
+  if(!$("coName").value.trim()||!$("coEmail").value.trim()){toast("Add your name and email first");return}
+  let total=subtotalValue();
+  if($("promo").value.trim().toUpperCase()==="CLIX10") total=total*.90;
+  $("checkoutTotal").textContent=money(total);
+  $("orderNo").textContent=makeOrderNumber();
+  $("checkoutView").style.display="none";$("successView").style.display="block";
+  cart=[];updateCount();renderBag();
+};
+window.onclick=e=>{if(e.target===$("modal"))closeInfo();if(e.target===$("bagModal"))$("bagModal").classList.remove("open");if(e.target===$("checkoutModal"))$("checkoutModal").classList.remove("open")}
+
+function updatePreview(){
+  let name=($("uname").value.trim()||"CLIXZ").slice(0,14);
+  let half=Math.max(1,Math.ceil(name.length*.62));
+  $("pvText").innerHTML=name.slice(0,half)+'<span>'+name.slice(half)+'</span>';
+  document.documentElement.style.setProperty("--blue",$("accent").value);
+  $("pvGame").textContent=$("game").value.toUpperCase();
+  $("pvStyle").textContent=$("style").value+" // CUSTOM";
+}
+["uname","game","style","accent"].forEach(id=>$(id).addEventListener("input",updatePreview));
+$("save").onclick=()=>toast("Build saved as a demo!");
+$("news").addEventListener("submit",e=>{e.preventDefault();toast("You're on the demo list ✦");e.target.reset()});
+
+updatePreview();
+</script>
+</body>
+</html>
